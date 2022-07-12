@@ -3,6 +3,15 @@ import numpy as np
 import  os
 import shutil
 import warnings
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
+import matplotlib.patches as mplpatches
+import matplotlib.ticker as ticker
+from matplotlib.ticker import LinearLocator
+import matplotlib.lines as lines
+import matplotlib.transforms as transforms
 warnings.filterwarnings("ignore")
 
 def plotCNV(matrix_path, output_path, project, plot_type="pdf", percentage=False, aggregate=False, read_from_file=True, write_to_file=True):
